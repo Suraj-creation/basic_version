@@ -6,68 +6,119 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Header -->
     <header>
         <nav>
-            <ul>
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle"><i class="fas fa-moon"></i></button></li>
             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div id="particles-js"></div>
         <div class="hero-content">
-            <h1>Welcome to My Portfolio</h1>
+            <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
             <p>I am a passionate web developer</p>
             <a href="#portfolio" class="btn">View My Work</a>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
         <h2>About Me</h2>
         <p>I am a web developer with expertise in HTML, CSS, JavaScript, and various frameworks. I love creating responsive and user-friendly websites.</p>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
+        <div class="skills-progress">
+            <div class="skill">
+                <span>HTML</span>
+                <div class="progress-bar" data-progress="95"></div>
             </div>
-            <div class="portfolio-item">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="progress-bar" data-progress="90"></div>
             </div>
-            <div class="portfolio-item">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Description of project 3.</p>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar" data-progress="85"></div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <a href="project1.jpg" data-lightbox="portfolio" data-title="Project 1">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                </div>
+            </a>
+            <a href="project2.jpg" data-lightbox="portfolio" data-title="Project 2">
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                </div>
+            </a>
+            <a href="project3.jpg" data-lightbox="portfolio" data-title="Project 3">
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of project 3.</p>
+                </div>
+            </a>
+        </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.95373531531615!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f8c1f8!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1633033226787!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
         <p>&copy; 2023 My Portfolio. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
